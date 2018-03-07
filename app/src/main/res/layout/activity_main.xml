@@ -42,11 +42,6 @@
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="30sp" />
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
             <LinearLayout
                 android:id="@+id/container_textview"
                 android:layout_width="match_parent"
@@ -73,15 +68,10 @@
 
             </LinearLayout>
 
-            <Space
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1" />
-
             <LinearLayout
                 android:id="@+id/lineair2"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="bottom"
                 android:orientation="horizontal">
@@ -111,10 +101,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <ViewSwitcher
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

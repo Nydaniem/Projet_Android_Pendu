@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
         });
         builder.create().show();
+        init();
     }
 
     public ArrayList<String> getlistemot(){
