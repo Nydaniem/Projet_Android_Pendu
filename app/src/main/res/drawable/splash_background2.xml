@@ -34,7 +34,7 @@
             android:layout_weight="0.5"
             android:contentDescription="@string/bg_ss"
             android:src="@drawable/ss"/>
-        
+
 
     </item>
 
