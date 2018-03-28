@@ -16,4 +16,7 @@
         completions."
     </string>
     <string name="item_setting">Item setting</string>
+    <string name="b_adventure_text">AVENTURE</string>
+    <string name="b_1_joueur">PENDU CLASSIQUE</string>
+    <string name="b_2_joueur">MULTI-JOUEURS</string>
 </resources>

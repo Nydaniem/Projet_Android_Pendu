@@ -39,11 +39,16 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/button3"
+                    android:id="@+id/button_adventure"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="Button" />
+                    android:background="@drawable/bg_button"
+                    android:text="@string/b_adventure_text"
+                    android:textAlignment="center"
+                    android:textColor="?android:attr/colorActivatedHighlight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -68,11 +73,15 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/button_1_joueur"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="Button" />
+                    android:background="@drawable/bg_button"
+                    android:text="@string/b_1_joueur"
+                    android:textColor="?android:attr/colorActivatedHighlight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -97,11 +106,15 @@
                     android:layout_weight="1" />
 
                 <Button
-                    android:id="@+id/button5"
+                    android:id="@+id/button_2_joueur"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
-                    android:text="Button" />
+                    android:background="@drawable/bg_button"
+                    android:text="@string/b_2_joueur"
+                    android:textColor="?android:attr/colorActivatedHighlight"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Space
                     android:layout_width="match_parent"
