@@ -44,6 +44,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="0.5"
                     android:background="@drawable/bg_button"
+                    android:onClick="LaunchAdventure"
                     android:text="@string/b_adventure_text"
                     android:textAlignment="center"
                     android:textColor="?android:attr/colorActivatedHighlight"
