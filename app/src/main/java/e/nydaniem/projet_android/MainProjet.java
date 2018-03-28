@@ -24,7 +24,7 @@ public class MainProjet extends AppCompatActivity {
         joueursolo = findViewById(R.id.button_1_joueur);
         joueursolo = findViewById(R.id.button_2_joueur);
     }
-    
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate our menu from the resources by using the menu inflater.
@@ -36,32 +36,17 @@ public class MainProjet extends AppCompatActivity {
     }
 
     public void LaunchAdventure(View v) {
-        new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainProjet.this, Aventure.class));
-                MainProjet.this.finish();
-            }
-        };
+            Intent intent = new Intent(MainProjet.this, Aventure.class);
+            startActivity(intent);
         }
 
     public void LaunchSolo(View v) {
-        new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainProjet.this, MainActivity.class));
-                MainProjet.this.finish();
-            }
-        };
+        Intent intent = new Intent(MainProjet.this, MainActivity.class);
+        startActivity(intent);
     }
 
     public void LaunchMulti(View v) {
-        new Runnable() {
-            @Override
-            public void run() {
-                startActivity(new Intent(MainProjet.this, Multijoueurs.class));
-                MainProjet.this.finish();
-            }
-        };
+        Intent intent = new Intent(MainProjet.this, Multijoueurs.class);
+        startActivity(intent);
     }
 }
