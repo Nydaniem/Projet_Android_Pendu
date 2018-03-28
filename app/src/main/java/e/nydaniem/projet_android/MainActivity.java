@@ -70,9 +70,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         container = findViewById(R.id.layout_mot_chercher);
         envoyer = findViewById(R.id.button_envoyer);
-        new_lettre = findViewById(R.id.lettre_entre);
         image = findViewById(R.id.image_pendu);
-        lettre_mem = findViewById(R.id.memlettreView);
         mot_a_trouver = findViewById((R.id.mot_a_trouver_view));
         lettre_A = findViewById(R.id.A);
         lettre_B = findViewById(R.id.B);
