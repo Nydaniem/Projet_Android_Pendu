@@ -28,7 +28,9 @@
         <activity
             android:name=".MainActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".MainProjet"></activity>
+        <activity android:name=".MainProjet" />
+        <activity android:name=".Multijoueurs" />
+        <activity android:name=".Aventure"></activity>
     </application>
 
 </manifest>
