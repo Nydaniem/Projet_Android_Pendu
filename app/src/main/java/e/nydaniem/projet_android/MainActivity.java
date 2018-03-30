@@ -2,6 +2,7 @@ package e.nydaniem.projet_android;
 
 
 import android.content.DialogInterface;
+import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -53,9 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button lettre_Z;
 
     private TextView lettre_mem;
-    private EditText new_lettre;
-    private ImageView image;
     private TextView mot_a_trouver;
+    private TextView new_lettre;
+    private ImageView image;
     private String mot;
     private int compt;
     private int error;
@@ -71,7 +72,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         container = findViewById(R.id.layout_mot_chercher);
         envoyer = findViewById(R.id.button_envoyer);
         image = findViewById(R.id.image_pendu);
-        mot_a_trouver = findViewById((R.id.mot_a_trouver_view));
+        lettre_mem = findViewById(R.id.lettre_mem);
+        mot_a_trouver = findViewById(R.id.mot_a_trouver);
+        new_lettre = findViewById(R.id.new_lettre_view);
         lettre_A = findViewById(R.id.A);
         lettre_B = findViewById(R.id.B);
         lettre_C = findViewById(R.id.C);
@@ -119,21 +122,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    public void onClickLettre(View v) {
+        Button b = (Button)v;
+        String ntm = (b.getText().toString());
+        if (ntm.equals("DEL")){
+            new_lettre.setText("");
+        }
+        else{
+            new_lettre.setText(b.getText().toString());
+        }
+    }
+
 
     @Override
     public void onClick(View v) {
-        System.out.println("click");
         String lettre_in = new_lettre.getText().toString().toUpperCase();
         new_lettre.setText("");
-        Log.d("test", lettre_in);
+        //Log.d("test", lettre_in);
 
         if (lettre_in.length() > 0) {
-            Log.d("test", lettre_mem.toString());
             if(!letter_present(lettre_in.charAt(0), listMemLettre)){
-                Log.d("test", lettre_mem.toString());
                 listMemLettre.add(lettre_in.charAt(0));
                 checkchar(lettre_in, mot);
-                Log.d("test", lettre_mem.toString());
             }
             if (compt == mot.length()){
                 gg= true;
@@ -242,7 +252,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         System.out.println("test1");
         wordlist = getlistemot();
         System.out.println("test2");
-        //int random = (int) (Math.floor(Math.random() * wordlist.size()));
         int random = new Random().nextInt(wordlist.size() + 1) + 1;
         System.out.println("test3 "+ random);
         String mot = wordlist.get(random).trim();

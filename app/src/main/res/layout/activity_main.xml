@@ -40,34 +40,44 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.3"
+                android:layout_weight="0.5"
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/lettre_mem"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
                     android:text="TextView" />
 
-                <TextView
-                    android:id="@+id/textView2"
+                <LinearLayout
+                    android:id="@+id/layout_mot_chercher"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="0.5"
-                    android:text="TextView" />
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <TextView
+                        android:id="@+id/mot_a_trouver"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/layout_mot_chercher"
+                android:id="@+id/layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0.2"
                 android:gravity="center_horizontal"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <TextView
-                    android:id="@+id/mot_a_trouver_view"
+                    android:id="@+id/new_lettre_view"
                     android:layout_width="275dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -88,6 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
+                    android:onClick="onClickLettre"
                     android:text="DEL" />
             </LinearLayout>
 
@@ -95,7 +106,7 @@
                 android:id="@+id/lineair2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
+                android:layout_weight="0.3"
                 android:gravity="bottom"
                 android:orientation="vertical">
 
@@ -109,7 +120,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="A"
                         android:textSize="10sp" />
 
@@ -118,7 +129,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="Z"
                         android:textSize="10sp" />
 
@@ -127,7 +138,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="E"
                         android:textSize="10sp" />
 
@@ -136,6 +147,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="onClickLettre"
                         android:text="R"
                         android:textSize="10sp" />
 
@@ -144,7 +156,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="T"
                         android:textSize="10sp" />
 
@@ -153,7 +165,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="Y"
                         android:textSize="10sp" />
 
@@ -162,7 +174,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="U"
                         android:textSize="10sp" />
 
@@ -171,7 +183,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="I"
                         android:textSize="10sp" />
 
@@ -180,7 +192,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="O"
                         android:textSize="10sp" />
 
@@ -189,7 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="P"
                         android:textSize="10sp" />
 
@@ -205,7 +217,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="Q"
                         android:textSize="10sp" />
 
@@ -214,7 +226,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="S"
                         android:textSize="10sp" />
 
@@ -223,7 +235,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="D"
                         android:textSize="10sp" />
 
@@ -232,7 +244,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="F"
                         android:textSize="10sp" />
 
@@ -241,7 +253,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="G"
                         android:textSize="10sp" />
 
@@ -250,7 +262,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="H"
                         android:textSize="10sp" />
 
@@ -259,7 +271,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="J"
                         android:textSize="10sp" />
 
@@ -268,7 +280,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="K"
                         android:textSize="10sp" />
 
@@ -277,7 +289,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="L"
                         android:textSize="10sp" />
 
@@ -286,7 +298,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="M"
                         android:textSize="10sp" />
 
@@ -302,7 +314,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="W"
                         android:textSize="10sp" />
 
@@ -311,7 +323,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="X"
                         android:textSize="10sp" />
 
@@ -320,7 +332,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="C"
                         android:textSize="10sp" />
 
@@ -329,7 +341,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="V"
                         android:textSize="10sp" />
 
@@ -338,7 +350,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="B"
                         android:textSize="10sp" />
 
@@ -347,7 +359,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="onClick"
+                        android:onClick="onClickLettre"
                         android:text="N"
                         android:textSize="10sp" />
 
