@@ -2,7 +2,6 @@ package e.nydaniem.projet_android;
 
 
 import android.content.DialogInterface;
-import android.provider.Settings;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,9 +53,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button lettre_Z;
 
     private TextView lettre_mem;
-    private TextView mot_a_trouver;
-    private TextView new_lettre;
+    private EditText new_lettre;
     private ImageView image;
+    private TextView mot_a_trouver;
     private String mot;
     private int compt;
     private int error;
@@ -136,14 +135,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
+        System.out.println("click");
         String lettre_in = new_lettre.getText().toString().toUpperCase();
         new_lettre.setText("");
-        //Log.d("test", lettre_in);
+        Log.d("test", lettre_in);
 
         if (lettre_in.length() > 0) {
+            Log.d("test", lettre_mem.toString());
             if(!letter_present(lettre_in.charAt(0), listMemLettre)){
+                Log.d("test", lettre_mem.toString());
                 listMemLettre.add(lettre_in.charAt(0));
                 checkchar(lettre_in, mot);
+                Log.d("test", lettre_mem.toString());
             }
             if (compt == mot.length()){
                 gg= true;
