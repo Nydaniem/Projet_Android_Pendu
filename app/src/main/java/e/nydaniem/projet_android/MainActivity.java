@@ -2,6 +2,7 @@ package e.nydaniem.projet_android;
 
 
 import android.content.DialogInterface;
+import android.media.MediaPlayer;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,8 +28,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private LinearLayout container;
     private Button envoyer;
-
-
     private TextView lettre_mem;
     private TextView new_lettre;
     private ImageView image;
@@ -39,6 +38,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<Character> listMemLettre = new ArrayList<>();
     private boolean gg;
     private ArrayList<String> wordlist = new ArrayList<>();
+
+    private MediaPlayer mySound;
+
+    public void playMusic() {
+        mySound.setLooping(true);
+        mySound.start();
+    }
+
+    @Override
+    public void onStop(){
+        super.onStop();
+        mySound.pause();
+    }
+
+    @Override
+    public void onRestart() {
+        super.onRestart();
+        mySound.start();
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,7 +70,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mot_a_trouver = findViewById(R.id.mot_a_trouver);
         new_lettre = findViewById(R.id.new_lettre_view);
 
-
+        mySound = MediaPlayer.create(this, R.raw.intro);
+        playMusic();
         init();
         envoyer.setOnClickListener(this);
         Log.d("btn", envoyer.getText().toString());
