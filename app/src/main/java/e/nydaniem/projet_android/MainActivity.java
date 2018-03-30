@@ -15,6 +15,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import org.w3c.dom.Text;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,35 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private LinearLayout container;
     private Button envoyer;
-    private Button lettre_A;
-    private Button lettre_B;
-    private Button lettre_C;
-    private Button lettre_D;
-    private Button lettre_E;
-    private Button lettre_F;
-    private Button lettre_G;
-    private Button lettre_H;
-    private Button lettre_I;
-    private Button lettre_J;
-    private Button lettre_K;
-    private Button lettre_L;
-    private Button lettre_M;
-    private Button lettre_N;
-    private Button lettre_O;
-    private Button lettre_P;
-    private Button lettre_Q;
-    private Button lettre_R;
-    private Button lettre_S;
-    private Button lettre_T;
-    private Button lettre_U;
-    private Button lettre_V;
-    private Button lettre_W;
-    private Button lettre_X;
-    private Button lettre_Y;
-    private Button lettre_Z;
+
 
     private TextView lettre_mem;
-    private EditText new_lettre;
+    private TextView new_lettre;
     private ImageView image;
     private TextView mot_a_trouver;
     private String mot;
@@ -74,30 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         lettre_mem = findViewById(R.id.lettre_mem);
         mot_a_trouver = findViewById(R.id.mot_a_trouver);
         new_lettre = findViewById(R.id.new_lettre_view);
-        lettre_A = findViewById(R.id.A);
-        lettre_B = findViewById(R.id.B);
-        lettre_C = findViewById(R.id.C);
-        lettre_D = findViewById(R.id.D);
-        lettre_E = findViewById(R.id.E);
-        lettre_F = findViewById(R.id.F);
-        lettre_I = findViewById(R.id.I);
-        lettre_J = findViewById(R.id.J);
-        lettre_K = findViewById(R.id.K);
-        lettre_L = findViewById(R.id.L);
-        lettre_M = findViewById(R.id.M);
-        lettre_N = findViewById(R.id.N);
-        lettre_O = findViewById(R.id.O);
-        lettre_P = findViewById(R.id.P);
-        lettre_Q = findViewById(R.id.Q);
-        lettre_R = findViewById(R.id.R);
-        lettre_S = findViewById(R.id.S);
-        lettre_T = findViewById(R.id.T);
-        lettre_U = findViewById(R.id.U);
-        lettre_V = findViewById(R.id.V);
-        lettre_W = findViewById(R.id.W);
-        lettre_X = findViewById(R.id.X);
-        lettre_Y = findViewById(R.id.Y);
-        lettre_Z = findViewById(R.id.Z);
+
 
         init();
         envoyer.setOnClickListener(this);
