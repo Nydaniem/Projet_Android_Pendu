@@ -92,10 +92,10 @@ public class Aventure extends AppCompatActivity {
             public void run() {
 
                 int randomimg = new Random().nextInt(2);
-                ObjectAnimator animation5 = ObjectAnimator.ofFloat(zombie, "translationX", -framemobs.getWidth()).setDuration(3000);
-                ObjectAnimator animation6 = ObjectAnimator.ofFloat(zombiefire, "translationX", -framemobs.getWidth()).setDuration(3000);
-                ObjectAnimator animation7 = ObjectAnimator.ofFloat(dragon, "translationX", -framemobs.getWidth()).setDuration(3000);
-                ObjectAnimator animation8 = ObjectAnimator.ofFloat(dragonfire, "translationX", -framemobs.getWidth()).setDuration(3000);
+                ObjectAnimator animation5 = ObjectAnimator.ofFloat(zombie, "translationX", -framemobs.getWidth()/2).setDuration(3000);
+                ObjectAnimator animation6 = ObjectAnimator.ofFloat(zombiefire, "translationX", -framemobs.getWidth()/2).setDuration(3000);
+                ObjectAnimator animation7 = ObjectAnimator.ofFloat(dragon, "translationX", -framemobs.getWidth()/2).setDuration(3000);
+                ObjectAnimator animation8 = ObjectAnimator.ofFloat(dragonfire, "translationX", -framemobs.getWidth()/2).setDuration(3000);
 
                 if (randomimg == 1){
                     new Handler().postDelayed(new Runnable() {
