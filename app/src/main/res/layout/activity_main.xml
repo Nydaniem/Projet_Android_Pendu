@@ -24,8 +24,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="false"
                 android:cropToPadding="false"
-                android:scaleType="fitCenter"
-                app:srcCompat="@drawable/first" />
+                android:scaleType="centerInside" />
 
         </LinearLayout>
 
@@ -85,6 +84,21 @@
                     android:textAlignment="center"
                     android:textSize="24sp" />
 
+                <Button
+                    android:id="@+id/button_envoyer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="OK"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/supprimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:onClick="onClickLettre"
+                    android:text="DEL" />
             </LinearLayout>
 
             <LinearLayout
@@ -346,24 +360,6 @@
                         android:layout_weight="1"
                         android:onClick="onClickLettre"
                         android:text="N"
-                        android:textSize="10sp" />
-
-                    <Button
-                        android:id="@+id/button_envoyer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="OK"
-                        android:textSize="10sp"
-                        android:visibility="visible" />
-
-                    <Button
-                        android:id="@+id/supprimer"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:onClick="onClickLettre"
-                        android:text="DEL"
                         android:textSize="10sp" />
 
                 </LinearLayout>
