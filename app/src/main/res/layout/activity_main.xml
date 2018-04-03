@@ -24,8 +24,7 @@
                 android:layout_height="match_parent"
                 android:adjustViewBounds="false"
                 android:cropToPadding="false"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/first" />
+                android:scaleType="centerInside" />
 
         </LinearLayout>
 
