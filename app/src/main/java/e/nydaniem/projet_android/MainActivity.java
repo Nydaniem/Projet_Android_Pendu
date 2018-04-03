@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private int compt;
     private int error;
     private ArrayList<Character> listMemLettre = new ArrayList<>();
-    private boolean gg;
+    private boolean gagne;
     private ArrayList<String> wordlist = new ArrayList<>();
 
     private MediaPlayer mySound;
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void init() {
         mot = randomword();
-        gg = false;
+        gagne = false;
         error = 0;
         compt = 0;
         lettre_mem.setText((""));
@@ -96,8 +96,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void onClickLettre(View v) {
         Button b = (Button)v;
-        String ntm = (b.getText().toString());
-        if (ntm.equals("DEL")){
+        String bGet = (b.getText().toString());
+        if (bGet.equals("DEL")){
             new_lettre.setText("");
         }
         else{
@@ -108,30 +108,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        System.out.println("click");
         String lettre_in = new_lettre.getText().toString().toUpperCase();
         new_lettre.setText("");
-        Log.d("test", lettre_in);
 
         if (lettre_in.length() > 0) {
-            Log.d("test", lettre_mem.toString());
             if(!letter_present(lettre_in.charAt(0), listMemLettre)){
-                Log.d("test", lettre_mem.toString());
                 listMemLettre.add(lettre_in.charAt(0));
                 checkchar(lettre_in, mot);
-                Log.d("test", lettre_mem.toString());
-            }
+                }
             if (compt == mot.length()){
-                gg= true;
-                createDialogue(gg);
+                gagne= true;
+                createDialogue(gagne);
             }
             if(!mot.contains(lettre_in)){
                 error++;
             }
             setimage(error);
             if (error == 6){
-                gg=false;
-                createDialogue(gg);
+                gagne=false;
+                createDialogue(gagne);
             }
             viewlettremem(listMemLettre);
         }
@@ -193,10 +188,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    public void createDialogue(Boolean gg){
+    public void createDialogue(Boolean gagne){
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("Vous avez gg !");
-        if(!gg) {
+        builder.setTitle("Vous avez gagné !");
+        if(!gagne) {
             builder.setTitle("Vous avez perdu !");
             builder.setMessage("le mot à trouver était :"+mot);
         }
@@ -225,13 +220,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public String randomword(){
-        System.out.println("test1");
         wordlist = getlistemot();
-        System.out.println("test2");
         int random = new Random().nextInt(wordlist.size() + 1) + 1;
-        System.out.println("test3 "+ random);
         String mot = wordlist.get(random).trim();
-        System.out.println("test4");
         return mot;
     }
 }

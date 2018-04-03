@@ -27,10 +27,10 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:screenOrientation="portrait" />
-        <activity android:name=".MainProjet" />
-        <activity android:name=".Multijoueurs" />
-        <activity android:name=".Aventure"></activity>
+            android:screenOrientation="portrait"  android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".MainProjet" android:screenOrientation="portrait"  />
+        <activity android:name=".Multijoueurs"  android:screenOrientation="portrait"  android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Aventure" android:screenOrientation="portrait"  android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
     </application>
 
 </manifest>
