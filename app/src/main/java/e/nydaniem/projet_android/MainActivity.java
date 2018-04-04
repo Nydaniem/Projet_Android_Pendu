@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private ArrayList<Character> listMemLettre = new ArrayList<>();
     private boolean gagne;
     private ArrayList<String> wordlist = new ArrayList<>();
-
     private MediaPlayer mySound;
 
     public void playMusic() {
@@ -221,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public String randomword(){
         wordlist = getlistemot();
-        int random = new Random().nextInt(wordlist.size() + 1) + 1;
+        int random = new Random().nextInt(wordlist.size() - 71) + 71;
         String mot = wordlist.get(random).trim();
         return mot;
     }
